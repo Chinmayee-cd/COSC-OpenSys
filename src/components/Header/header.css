@@ -1,0 +1,215 @@
+
+
+.header{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+
+
+backdrop-filter: blur( 14px );
+-webkit-backdrop-filter: blur( 4px );
+
+
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+.cosclogo img{
+    height: 70px;
+    padding: 10px;
+}
+
+.cosclogo{
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.nav__wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.logo img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    column-gap: 2.7rem;
+    margin-bottom: 0;
+}
+
+.nav__item a{
+    color: #fff !important;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.nav__icons{
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+
+}
+
+.nav__icons span i{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.cart__icon, .fav__icon{
+    position: relative;
+}
+
+.prof__icon i {
+    font-size: 1.5rem !important;
+}
+
+.badge{
+    position: absolute;
+    top: 52%;
+    right: -20%;
+    width: 15px;
+    height: 15px;
+    content: '';
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 10;
+
+}
+
+.nav__icons .profile img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.nav__icons .profile{
+    position: relative;
+    z-index: 9;
+}
+
+.nav__icons .profile .profile__actions{
+    position: absolute;
+    top: 100%;
+    left: 150;
+    width: 150px;
+    z-index: 10;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--hero-bg);
+    line-height: 30px;
+    display: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+
+
+
+.show__profileActions{
+    display: block !important;
+}
+
+.mobile__menu{
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    display: none;
+}
+
+.nav__active{
+    font-weight: 700 !important;
+    color: #000 !important;
+    
+}
+
+@media only screen and (max-width:768px) {
+    .navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.399);
+        z-index: 9999;
+        display: none;
+
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        z-index: 99999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .active__menu{
+        display: block;
+
+    }
+
+    .mobile__menu{
+        display: block;
+    }
+
+    .mobile__menu span i{
+        font-size: 1.1rem !important;
+    }
+
+    .logo img{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .fav__icoon i , .cart__icon i  {
+        font-size: 1.2rem !important;
+
+    }
+
+
+    .nav__icons span img{
+        width: 1.4rem;
+        height: 1.4rem;
+
+    } 
+
+    .header{
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+    }
+}
