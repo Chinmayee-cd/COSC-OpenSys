@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <Helmet title={"Home"}>
-      <section className="hero__section">
+      <section id="Home" className="hero__section">
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -158,7 +158,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="FAQs" className="FAQs">
+      <section id="faqs" className="FAQs">
         <div className="flex justify-center p-4">
           <Faqs />
         </div>

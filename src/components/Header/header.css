@@ -6,8 +6,10 @@
     width: 100%;
     height: 70px;
     line-height: 70px;
-
-
+/* 
+    // please note that this header is no longer in use and is
+    // replaced by Navbar.jsx because it was easier to implement using
+    //javascript and tailwindcss */
 backdrop-filter: blur( 14px );
 -webkit-backdrop-filter: blur( 4px );
 

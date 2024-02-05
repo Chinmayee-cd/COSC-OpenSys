@@ -368,3 +368,23 @@ border: 1px solid rgba(255, 255, 255, 0.3);
    
     
 }
+
+
+/* For Webkit browsers like Chrome and Safari */
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2b2b2b; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scroll thumb */
+    border-radius: 5px; /* radius of the scroll thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scroll thumb on hover */
+}

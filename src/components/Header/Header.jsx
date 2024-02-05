@@ -9,6 +9,10 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
+// please note that this header is no longer in use and is
+// replaced by Navbar.jsx because it was easier to implement using
+//javascript and tailwindcss
+
   const menuToggle = () => menuRef.current.classList.toggle("active__menu");
 
   useEffect(() => {
