@@ -11,7 +11,9 @@ const Accordian = memo(({ question, answer }) => {
 			>
 				<span>{question}</span>
 				<svg
-					className="fill-[white] shrink-0 ml-8"
+					className={`fill-[white] shrink-0 ml-8 transition origin-center duration-300 ${
+						accordianOpen ? "rotate-45" : ""
+					}`}
 					width="16"
 					height="16"
 					xmlns="http://www.w3.org/2000/svg"
@@ -21,23 +23,13 @@ const Accordian = memo(({ question, answer }) => {
 						width="16"
 						height="2"
 						rx="1"
-						className={`transform origin-center transition duration-200 ease-out ${
-							accordianOpen && "!rotate-180"
-						}`}
+						className="rotate-90 origin-center"
 					/>
-					<rect
-						y="7"
-						width="16"
-						height="2"
-						rx="1"
-						className={`transform origin-center rotate-90 transition duration-200 ease-out ${
-							accordianOpen && "!rotate-180"
-						}`}
-					/>
+					<rect y="7" width="16" height="2" rx="1" />
 				</svg>
 			</button>
 			<div
-				className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-200 text-sm ${
+				className={`grid overflow-hidden transition-all duration-100 ease-in-out text-slate-200 text-sm ${
 					accordianOpen
 						? "grid-rows-[1fr] opacity-100"
 						: "grid-rows-[0fr] opacity-0"
