@@ -39,7 +39,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+i,
+a {
   padding: 0;
   margin: 0;
   color: #fff !important;

@@ -168,23 +168,15 @@ backdrop-filter: blur( 14px );
         right: 0;
         width: 250px;
         height: 100%;
-        background: #fff;
-        z-index: 99999;
+        background: black;
+        z-index: 9999;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
 
 
     }
 
-    .active__menu{
-        display: block;
-
-    }
-
-    .mobile__menu{
-        display: block;
-    }
+ 
 
     .mobile__menu span i{
         font-size: 1.1rem !important;
@@ -212,4 +204,10 @@ backdrop-filter: blur( 14px );
         height: 60px;
         line-height: 60px;
     }
+
+    .cosclogo img{
+        height: 60px;
+        padding: 10px;
+    }
 }
+
