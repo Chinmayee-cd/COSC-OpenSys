@@ -4,7 +4,7 @@ import logo2 from "../../assets/images/opensys-logo.png";
 import logo from "../../assets/images/LogoCOSC.svg";
 import { Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import {useState} from "react";
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
@@ -28,11 +28,25 @@ const Header = () => {
     stickyHeaderFunc();
     return () => window.removeEventListener("scroll", stickyHeaderFunc);
   }, []);
-
   return (
     <header className="header" ref={headerRef}>
       <Container>
         <Row>
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox"/>
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="#hero_content"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#events"><li>Events</li></a>
+                <a href="#faq"><li>FAQs</li></a>
+                <a href="#contact"><li>Contact</li></a>
+              </ul>
+            </div>
+          </nav>
           <div className="nav__wrapper">
             <div className="cosclogo">
               <Link to="/home">
