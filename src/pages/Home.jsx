@@ -7,6 +7,8 @@ import animationData from "../assets/lottie/Animation - 1707063924246.json";
 import Lottie from "react-lottie";
 import github from "../assets/images/4695723.png";
 import cascade from "../assets/images/download.png";
+import { faqs } from "../components/constants/data";
+import Faqs from "../components/FAQs/Faqs";
 
 const Home = () => {
   const lottieOptions = {
@@ -156,7 +158,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="FAQs" className="FAQs"></section>
+      <section id="FAQs" className="FAQs">
+        <div className="flex justify-center p-4">
+          <Faqs />
+        </div>
+      </section>
     </Helmet>
   );
 };
