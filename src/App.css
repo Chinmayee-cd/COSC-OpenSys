@@ -5,34 +5,38 @@
 @tailwind utilities;
 /*  css variables */
 :root {
-  --card-bg-01: #fdefe6;
-  --card-bg-02: #d6e5fb;
-  --card-bg-03: #ceebe9;
-  --card-bg-04: #e2f2b2;
-  --primary-color: #fff;
-  --hero-bg: #0B0C10 ;
-  --heading-fontSize: 2rem;
-  --small-text-color: #999;
-  --heading-text-color: #fff;
-  --real-col: #510bdfff;
+	--card-bg-01: #fdefe6;
+	--card-bg-02: #d6e5fb;
+	--card-bg-03: #ceebe9;
+	--card-bg-04: #e2f2b2;
+	--primary-color: #fff;
+	--hero-bg: #0b0c10;
+	--heading-fontSize: 2rem;
+	--small-text-color: #999;
+	--heading-text-color: #fff;
+	--real-col: #510bdfff;
+	display: flex;
 }
-
-
+@media only screen and (max-width: 768px) {
+	:root {
+		flex-direction: column;
+	}
+}
 
 /* reset browser default */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #191123;
-  font-family: "Montserrat", sans-serif;
-  background-image: url(../src/assets/images/bbblurry.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+	background-color: #191123;
+	font-family: "Montserrat", sans-serif;
+	background-image: url(../src/assets/images/bbblurry.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 h1,
@@ -42,45 +46,43 @@ h4,
 h5,
 h6,
 p,
-i,
-a {
-  padding: 0;
-  margin: 0;
-  color: #fff !important;
+i {
+	padding: 0;
+	margin: 0;
+	color: #fff !important;
 }
 
 p {
-  color: var(--small-text-color);
-  font-size: 1rem;
+	color: var(--small-text-color);
+	font-size: 1rem;
 }
 
 h1,
 h2 {
-  font-size: var(--heading-fontSize);
+	font-size: var(--heading-fontSize);
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
-  color: unset;
+	text-decoration: none;
+	color: unset;
 }
 
-img{
-  width: 100%;
+img {
+	width: 100%;
 }
 
-section{
-  padding: 60px 0px;
-  margin: 0px 0px;
-
+section {
+	padding: 60px 0px;
+	margin: 0px 0px;
 }
 
-.section__title{
-  color:black;
-  font-weight: 600;
+.section__title {
+	color: black;
+	font-weight: 600;
 }
 
 .FormGroup {
@@ -89,7 +91,8 @@ section{
 	border-style: none;
 	background-color: #7795f8;
 	will-change: opacity, transform;
-	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff;
+	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+		inset 0 1px 0 #829fff;
 	border-radius: 4px;
 }
 
@@ -111,9 +114,8 @@ section{
 	padding: 11px 15px 11px 0;
 }
 
-
-@media only screen and (max-width:768px){
-  section{
-    padding: 40px 0px;
-  }
+@media only screen and (max-width: 768px) {
+	section {
+		padding: 40px 0px;
+	}
 }
