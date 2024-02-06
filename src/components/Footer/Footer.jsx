@@ -16,12 +16,12 @@ const Footer = () => {
             <p className="socialp">
               <div class='oo'>
             CONTACT  INFORMATION: <br /> <br /></div><br />
-            <div class='hi'>
+            <div class='loc'>
             <p>LOCATION<br />Chaitanya Bharathi Institute of Technology, <br />Gandipet, Hyderabad - 500075.</p>
-            <div class='hii'>
+            <div class='vis'>
             <p>VISIT US: <br /><a href="https://cbitosc.github.io/">CBIT Open Source Community</a><br /> <br />Email: <br /><a href="mailto:cosc@cbit.ac.in">cosc@cbit.ac.in</a></p>
             </div><br />
-            <div class='hiii'>
+            <div class='con'>
             <p>CONTACT: <br />Contact1:xxxxxxxxxx <br /> Contact2:xxxxxxxxx</p>
             </div>
             <div class='yo'>

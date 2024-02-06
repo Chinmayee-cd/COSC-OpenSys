@@ -69,25 +69,25 @@ border-radius: 10px;
 
   
   /* Left-align the text within the left block's paragraphs */
-  .socialp .hi p {
+  .socialp .loc p {
     text-align: center;
     margin-right: 30px;
   }
-  .socialp .hi {
+  .socialp .loc {
     display: flex;
     justify-content: left; /* Center the left block horizontally */
     margin-left: 0; /* Reset any existing margin */
   }
   /* Center the left block */
-  .socialp .hii {
+  .socialp .vis {
     text-align: center;
   }
-  .socialp .hii {
+  .socialp .vis {
     display: flex;
     justify-content: center; /* Center the left block horizontally */
     margin-left: 10px; /* Reset any existing margin */
   }
-  .socialp .hiii{
+  .socialp .con{
     text-align: center;
     margin-left:10px;
     margin-right: 60px;
