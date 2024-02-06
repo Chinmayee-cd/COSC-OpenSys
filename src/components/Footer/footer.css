@@ -97,9 +97,11 @@
 	text-align: left;
 	margin-left: 20 px;
 }
-.socialp a:hover {
-	text-decoration: underline; /* Add underline on hover */
-}
+
+/* .socialp a:hover {
+	text-decoration: underline;
+} */
+
 /* Add a border around the contact block */
 /* Add a white border around the contact block */
 
@@ -119,12 +121,14 @@
 .socialp i::before,
 .socialp a svg {
 	padding-bottom: 5px;
-	border-bottom: #f1c40f 2px dotted;
+	border-bottom: #f1c40f 2px dashed;
+	transition: 0.1s ease;
 }
 
 .socialp i:hover::before,
-.socialp a:hover {
+.socialp a:has(svg):hover {
 	color: #f1c40f;
+	border-bottom: #f1c40f 2px dashed;
 }
 
 .socialp .three {
@@ -215,15 +219,14 @@
 }
 
 @media (max-width: 768px) {
-  .loc {
-    flex-direction: column;
-    align-items: center;
-  }
+	.loc {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 @media (max-width: 768px) {
-  #contactdiv {
-    margin-left: 10px;
-  }
+	#contactdiv {
+		margin-left: 10px;
+	}
 }
-
