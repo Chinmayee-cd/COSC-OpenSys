@@ -2,182 +2,167 @@
 @tailwind components;
 @tailwind utilities;
 
-.footer{
-    padding-top: 60px;
-    padding-bottom: 30px;
+.footer {
+	padding-top: 60px;
+	padding-bottom: 30px;
 
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
 }
 
-.footer__text{
-    line-height: 30px;
-    
+.footer__text {
+	line-height: 30px;
 }
 
-.footer__quick-links ul li{
-    background: transparent !important;
-
+.footer__quick-links ul li {
+	background: transparent !important;
 }
 
-.quick__links-title{
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+.quick__links-title {
+	margin-bottom: 20px;
+	font-size: 1.1rem;
 }
 
-.footer__contact li span{
-    font-size: 1.2rem;
-
+.footer__contact li span {
+	font-size: 1.2rem;
 }
 
-.footer__contact li p{
-    font-size: 9.9rem;
+.footer__contact li p {
+	font-size: 9.9rem;
 }
 
-.footer__copyright{
-    font-size: 0.9rem;
-    margin-top: 50px;
-    text-align: center;
+.footer__copyright {
+	font-size: 0.9rem;
+	margin-top: 50px;
+	text-align: center;
 }
 
-.socialp{
-    font-size: 30px;
+.socialp {
+	font-size: 30px;
 }
-.socialp:hover{
-    color: var(--primary-color);
+.socialp:hover {
+	color: var(--primary-color);
 }
-.socialp i:hover{
-    color: var(--primary-color);
-}
-
-.socialp i{
-    margin: 0px 20px;
+.socialp i:hover {
+	color: var(--primary-color);
 }
 
-  
-  /* Adjust margins for specific icons */
-  .one,
-  .two,
-  .three,
-  .four {
-    display: inline-block; /* Ensure icons appear on the same line */
-  }
+.socialp i {
+	margin: 0px 20px;
+}
 
+/* Adjust margins for specific icons */
+.one,
+.two,
+.three,
+.four {
+	display: inline-block; /* Ensure icons appear on the same line */
+}
 
-  
-  /* Left-align the text within the left block's paragraphs */
-  .socialp .loc p {
-    text-align: center;
-    margin-right: 30px;
-  }
-  .socialp .loc {
-    display: flex;
-    justify-content: left; /* Center the left block horizontally */
-    margin-left: 0; /* Reset any existing margin */
-  }
-  /* Center the left block */
-  .socialp .vis {
-    text-align: center;
-  }
-  .socialp .vis {
-    display: flex;
-    justify-content: center; /* Center the left block horizontally */
-    margin-left: 50px; 
-    margin-right: 30px;/* Reset any existing margin */
-  }
-  .socialp .con{
-    text-align: center;
-    margin-left:60px;
-  }
-  .yo {
-    font-size: 15px;
-    
-  }
-  
-  .sm p{
-    font-size: 15px;
-  }
+/* Left-align the text within the left block's paragraphs */
+.socialp .loc p {
+	text-align: center;
+	margin-right: 30px;
+}
+.socialp .loc {
+	display: flex;
+	justify-content: center; /* Center the block horizontally */
+	margin-left: 0; /* Reset any existing margin */
+}
+/* Center the left block */
+.socialp .vis {
+	text-align: center;
+}
+.socialp .vis {
+	display: flex;
+	justify-content: center; /* Center the left block horizontally */
+	margin-left: 50px;
+	margin-right: 30px; /* Reset any existing margin */
+}
+.socialp .con {
+	text-align: center;
+	margin-left: 60px;
+}
+.yo {
+	font-size: 15px;
+}
 
-  .socialp .yo{
-    text-align: left;
-    margin-left: 20 px;
-  }
-  .socialp a:hover {
-    text-decoration: underline; /* Add underline on hover */
-  }
-  /* Add a border around the contact block */
+.sm p {
+	font-size: 15px;
+}
+
+.socialp .yo {
+	text-align: left;
+	margin-left: 20 px;
+}
+.socialp a:hover {
+	text-decoration: underline; /* Add underline on hover */
+}
+/* Add a border around the contact block */
 /* Add a white border around the contact block */
 
-  /* Add border around social media icons */
+/* Add border around social media icons */
 
-  .socialp .one i,
-  .socialp .two ,
-  .socialp .three i,
-  .socialp .four i {
-    display: inline-block;
-  }
-  .socialp .one {
-    margin-right: 5px; /* Reduce the right margin for the Instagram icon */
-  }
-  .socialp .three {
-    margin-right: 5px; /* Reduce the right margin for the Facebook icon */
-  }
-  .socialp .two{
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-  .socialp .icon-container {
-    display: inline-block; /* Ensure the container only takes up as much width as necessary */
-    border: 2px solid white; /* Add border to create the white box */
-    padding: 10px; /* Add padding to create space between the icons and the border */
-    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
-  }
+.socialp .one i,
+.socialp .two,
+.socialp .three i,
+.socialp .four i {
+	display: inline-block;
+}
+.socialp .one {
+	margin-right: 5px; /* Reduce the right margin for the Instagram icon */
+}
+.socialp .three {
+	margin-right: 5px; /* Reduce the right margin for the Facebook icon */
+}
+.socialp .two {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+.socialp .icon-container {
+	display: inline-block; /* Ensure the container only takes up as much width as necessary */
+	border: 2px solid white; /* Add border to create the white box */
+	padding: 10px; /* Add padding to create space between the icons and the border */
+	border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
 
-  
-
-  
-  
 /* Add border around the container of social media icons */
-  /* Underline all headings */
+/* Underline all headings */
 /* Underline specific headings */
 /* Underline Contact Information with a fancy effect */
 /* Colored underline for CONTACT INFORMATION heading */
 /* Glowing underline for CONTACT INFORMATION heading */
 
-  
-  /* Glowing underline for CONTACT INFORMATION heading */
+/* Glowing underline for CONTACT INFORMATION heading */
 
-  
-  /* Glowing underline for CONTACT INFORMATION heading */
+/* Glowing underline for CONTACT INFORMATION heading */
 /* Glowing underline for CONTACT INFORMATION heading */
 .socialp .oo {
-    position: relative; /* Establish positioning context for pseudo-element */
-    text-decoration: none; /* Remove default underline */
-  }
-  
-  .socialp .oo::after {
-    content: ""; /* Add content for pseudo-element */
-    position: absolute; /* Position the pseudo-element relative to its parent */
-    left: 0; /* Align to the left */
-    bottom: -2px; /* Position slightly below the text */
-    width: 100%; /* Full width */
-    height: 2px; /* Height of the underline */
-    background-color: blue; /* Color of the underline */
-    animation: glowing 1.5s infinite alternate; /* Apply glowing animation */
-  }
-  
-  /* Define glowing animation */
-  @keyframes glowing {
-    0% {
-      opacity: 0.5; /* Initial opacity */
-      box-shadow: 0 0 10px 2px blue; /* Shadow effect */
-    }
-    100% {
-      opacity: 1; /* Final opacity */
-      box-shadow: 0 0 20px 5px blue; /* Increased intensity and spread of the glow */
-    }
-  }
-  
+	position: relative; /* Establish positioning context for pseudo-element */
+	text-decoration: none; /* Remove default underline */
+}
+
+.socialp .oo::after {
+	content: ""; /* Add content for pseudo-element */
+	position: absolute; /* Position the pseudo-element relative to its parent */
+	left: 0; /* Align to the left */
+	bottom: -2px; /* Position slightly below the text */
+	width: 100%; /* Full width */
+	height: 2px; /* Height of the underline */
+	background-color: blue; /* Color of the underline */
+	animation: glowing 1.5s infinite alternate; /* Apply glowing animation */
+}
+
+/* Define glowing animation */
+@keyframes glowing {
+	0% {
+		opacity: 0.5; /* Initial opacity */
+		box-shadow: 0 0 10px 2px blue; /* Shadow effect */
+	}
+	100% {
+		opacity: 1; /* Final opacity */
+		box-shadow: 0 0 20px 5px blue; /* Increased intensity and spread of the glow */
+	}
+}

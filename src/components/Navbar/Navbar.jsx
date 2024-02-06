@@ -88,7 +88,7 @@ const Navbar = () => {
 								nav.id === active
 									? "text-cyan-600 font-bold"
 									: "text-white"
-							} hover:!text-blue-300`}
+							} transition duration-300 hover:!text-amber-400`}
 						>
 							{nav.title}
 						</a>

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./footer.css";
 import { Container, Row, Col } from "reactstrap";
-import { FaXTwitter } from "react-icons/fa6";
 import { RiTwitterXFill } from "react-icons/ri";
 const Footer = () => {
   useEffect(() => {
