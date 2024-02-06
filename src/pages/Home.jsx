@@ -104,8 +104,12 @@ const Home = () => {
 			<section id="events" className="events">
 				<h1 className="h1events">Events</h1>
 				<div className="neomorphism">
-					<div className="containeron">
-						<h1>Git Cryptex</h1>
+				<div className="text-white" style={{width:'100%'}}>
+						<div id='gitimagedesktop'>
+						<img className="github" style={{height:'auto'}} src={github} alt="" />
+						</div>
+						<div className="text-3xl m-6 " style={{lineHeight:'24px'}}>
+						<h1 className="font-semibold pb-4">Git Cryptex</h1>
 						<p>
 							An event aimed to test participants' knowledge on
 							open-source technologies such as Git and GitHub. The
@@ -124,11 +128,12 @@ const Home = () => {
 							<i className="ri-calendar-todo-fill"></i>
 							<p>Date: 24th February 2024</p>
 						</div>
-						<motion.button className="buy__button mt-40">
-							<a href="#events">Register</a>
+						<motion.button id="event1register" className="buy__button mt-40">
+							<a href="#events" style={{lineHeight:'24px'}} className="text-[16px]">Register</a>
 						</motion.button>
+						</div>
 					</div>
-					<div>
+					<div id='gitimage'>
 						<img className="github" src={github} alt="" />
 					</div>
 				</div>
@@ -137,15 +142,15 @@ const Home = () => {
 					<div>
 						<img className="cascade" src={cascade} alt="" />
 					</div>
-					<div className="containeron">
-						<h1>Cascade Arcade</h1>
+					<div style={{lineHeight:'24px'}} className="text-3xl m-6">
+						<h1 className="font-semibold pb-4">Cascade Arcade</h1>
 						<p>
 							An open-sourced event for all the design and UI/UX
 							enthusiasts of the college community, who will
 							compete against each other to create CSS templates
 							that match the specified pattern.
 						</p>
-						<div className="display-flex icon-text">
+						<div className="display-flex icon-text py-2">
 							<i className="ri-user-3-fill"></i>
 							<p>Participation: Individual Event</p>
 						</div>
@@ -153,7 +158,7 @@ const Home = () => {
 							<i className="ri-calendar-todo-fill"></i>
 							<p>Date: 24th February 2024</p>
 						</div>
-						<div className="display-flex icon-text">
+						<div className="display-flex icon-text py-2">
 							<i className="ri-link"></i>
 							<p>
 								Reference Link:{" "}
@@ -165,8 +170,8 @@ const Home = () => {
 								</a>
 							</p>
 						</div>
-						<motion.button className="buy__button mt-40 mb-40">
-							<a href="#events">Register</a>
+						<motion.button id="event2register" className="buy__button mt-40 mb-40 " >
+							<a href="#events" className="text-[16px]" >Register</a>
 						</motion.button>
 					</div>
 				</div>

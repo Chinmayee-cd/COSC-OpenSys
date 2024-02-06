@@ -226,6 +226,51 @@
 	display: flex;
 }
 
+@media (max-width: 768px) {
+	.neomorphism {
+		width: 85%;
+	}
+	.containeron {
+		display: flex;
+		flex-direction: column-reverse;
+		background-color: black;
+	}
+	#gitimage {
+		display: none;
+	}
+
+  }
+
+@media (min-width: 768px) {
+	#gitimagedesktop {
+		display: none;
+	}
+	#event2register {
+		padding-bottom: 12px;
+	}
+	#event1register {
+		padding-bottom: 12px;
+	}
+
+  }
+
+@media (max-width: 768px) {
+	#event2button {
+		display: none;
+	}
+	#event2title {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	#event2buttondesktop {
+		display: none;
+	}
+	#event2titledesktop {
+		display: none;
+	}
+}
 .github {
 	margin-top: 0px;
 	/* height: 400px; */
