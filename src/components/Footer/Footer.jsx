@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./footer.css";
 import { Container, Row, Col } from "reactstrap";
-
+import { FaXTwitter } from "react-icons/fa6";
+import { RiTwitterXFill } from "react-icons/ri";
 const Footer = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,16 +23,13 @@ const Footer = () => {
             <p>VISIT US: <br /><a href="https://cbitosc.github.io/">CBIT Open Source Community</a><br /> <br />Email: <br /><a href="mailto:cosc@cbit.ac.in">cosc@cbit.ac.in</a></p>
             </div><br />
             <div class='con'>
-            <p>CONTACT: <br />Contact1:xxxxxxxxxx <br /> Contact2:xxxxxxxxx</p>
-            </div>
-            <div class='yo'>
-            <p> Miscellaneous  links:  <br /></p><a href="https://cbit-hacktoberfest23.vercel.app/"> 1.hactoberfest 2023</a><br /> <a href="https://www.cbit.ac.in/">2.CBIT</a>
+            <p>CONTACT: <br />Sai Kiran:+91 7995166572 <br /> Akil: +91 9442621187</p>
             </div>
             </div><br />
             <br />
             <div class='sm'>
             <p>Our Social Media Handles: <br /> <br /></p> </div>
-
+            <div className="icon-container">
               <div class='one'>
               <a
                 href="https://www.instagram.com/cbitosc/"
@@ -57,7 +55,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="ri-twitter-fill"></i>
+                <RiTwitterXFill />
               </a>
               </div>
               <div class='four'>
@@ -69,6 +67,7 @@ const Footer = () => {
               >
                 <i className="ri-linkedin-line"></i>
               </a>
+              </div>
               </div>
             </p>
           </Col>
