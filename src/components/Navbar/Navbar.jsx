@@ -85,11 +85,10 @@ const Navbar = () => {
 						<a
 							href={`#${nav.id}`}
 							className={`text-sm ${
-								nav.id === active ||
-								(initialRender && nav.id === "home")
+								nav.id === active
 									? "text-cyan-600 font-bold"
 									: "text-white"
-							}`}
+							} hover:!text-blue-300`}
 						>
 							{nav.title}
 						</a>

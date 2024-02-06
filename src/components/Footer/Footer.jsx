@@ -14,7 +14,7 @@ const Footer = () => {
         <Row>
           <Col className="text-center social" lg="12">
             <p className="socialp">
-              <div class='oo'>
+              <div id="contact" class='oo'>
             CONTACT  INFORMATION: <br /> <br /></div><br />
             <div class='loc'>
             <p>LOCATION<br />Chaitanya Bharathi Institute of Technology, <br />Gandipet, Hyderabad - 500075.</p>
