@@ -21,7 +21,7 @@ const Home = () => {
 
 	return (
 		<Helmet title={"Home"}>
-			<section id="Home" className="hero__section">
+			<section id="home" className="hero__section">
 				<Container>
 					<Row>
 						<Col lg="6" md="6">
