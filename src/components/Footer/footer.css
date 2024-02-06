@@ -56,3 +56,108 @@ border-radius: 10px;
 .socialp i{
     margin: 0px 20px;
 }
+
+  
+  /* Adjust margins for specific icons */
+  .one,
+  .two,
+  .three,
+  .four {
+    display: inline-block; /* Ensure icons appear on the same line */
+  }
+
+
+  
+  /* Left-align the text within the left block's paragraphs */
+  .socialp .hi p {
+    text-align: center;
+    margin-right: 30px;
+  }
+  .socialp .hi {
+    display: flex;
+    justify-content: left; /* Center the left block horizontally */
+    margin-left: 0; /* Reset any existing margin */
+  }
+  /* Center the left block */
+  .socialp .hii {
+    text-align: center;
+  }
+  .socialp .hii {
+    display: flex;
+    justify-content: center; /* Center the left block horizontally */
+    margin-left: 10px; /* Reset any existing margin */
+  }
+  .socialp .hiii{
+    text-align: center;
+    margin-left:10px;
+    margin-right: 60px;
+  }
+  .yo {
+    font-size: 15px;
+    
+  }
+  
+  .sm p{
+    font-size: 15px;
+  }
+
+  .socialp .yo{
+    text-align: left;
+    margin-left: 20 px;
+  }
+  .socialp a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  /* Add a border around the contact block */
+/* Add a white border around the contact block */
+
+  /* Add border around social media icons */
+.socialp .one i,
+.socialp .two i,
+.socialp .three i,
+.socialp .four i {
+  border: 2px solid white; /* Adjust border properties as needed */
+  padding: 10px; /* Add padding to create space between the icon and the border */
+  margin: 5px; /* Add margin to space out the icons */
+}
+/* Add border around the container of social media icons */
+  /* Underline all headings */
+/* Underline specific headings */
+/* Underline Contact Information with a fancy effect */
+/* Colored underline for CONTACT INFORMATION heading */
+/* Glowing underline for CONTACT INFORMATION heading */
+
+  
+  /* Glowing underline for CONTACT INFORMATION heading */
+
+  
+  /* Glowing underline for CONTACT INFORMATION heading */
+/* Glowing underline for CONTACT INFORMATION heading */
+.socialp .oo {
+    position: relative; /* Establish positioning context for pseudo-element */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .socialp .oo::after {
+    content: ""; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element relative to its parent */
+    left: 0; /* Align to the left */
+    bottom: -2px; /* Position slightly below the text */
+    width: 100%; /* Full width */
+    height: 2px; /* Height of the underline */
+    background-color: blue; /* Color of the underline */
+    animation: glowing 1.5s infinite alternate; /* Apply glowing animation */
+  }
+  
+  /* Define glowing animation */
+  @keyframes glowing {
+    0% {
+      opacity: 0.5; /* Initial opacity */
+      box-shadow: 0 0 10px 2px blue; /* Shadow effect */
+    }
+    100% {
+      opacity: 1; /* Final opacity */
+      box-shadow: 0 0 20px 5px blue; /* Increased intensity and spread of the glow */
+    }
+  }
+  
