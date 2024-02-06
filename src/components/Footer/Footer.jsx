@@ -12,17 +12,19 @@ const Footer = () => {
     <footer className="footer" id="contact">
       <Container>
         <Row>
-          <Col className="text-center social" lg="12">
-            <p className="socialp">
-              <div id="contact" class='oo'>
+        <Col className="text-center social" lg="12">
+            <p className="socialp flex flex-col items-center">
+              <div class='oo'>
             CONTACT  INFORMATION: <br /> <br /></div><br />
-            <div class='loc'>
-            <p>LOCATION<br />Chaitanya Bharathi Institute of Technology, <br />Gandipet, Hyderabad - 500075.</p>
-            <div class='vis'>
+            <div class='loc flex'>
+              <div className="flex flex-col items-center text-[16px] py-6">
+                <div>LOCATION:<br />Chaitanya Bharathi Institute of Technology, <br />Gandipet, Hyderabad - 500075.</div>
+              </div>
+            <div class='vis flex flex-col items-center'>
             <p>VISIT US: <br /><a href="https://cbitosc.github.io/">CBIT Open Source Community</a><br /> <br />Email: <br /><a href="mailto:cosc@cbit.ac.in">cosc@cbit.ac.in</a></p>
             </div><br />
-            <div class='con'>
-            <p>CONTACT: <br />Sai Kiran:+91 7995166572 <br /> Akil: +91 9442621187</p>
+            <div id="contactdiv" style={{display:'flex',alignItems:'center',justifyContent:'center'}} class='con flex justify-center'>
+            <p className="flex justify-center items-center">CONTACT: <br />Sai Kiran:+91 7995166572 <br /> Akil: +91 9442621187</p>
             </div>
             </div><br />
             <br />

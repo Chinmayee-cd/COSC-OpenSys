@@ -213,3 +213,17 @@
 		gap: 2rem;
 	}
 }
+
+@media (max-width: 768px) {
+  .loc {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #contactdiv {
+    margin-left: 10px;
+  }
+}
+
