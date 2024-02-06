@@ -85,12 +85,12 @@ border-radius: 10px;
   .socialp .vis {
     display: flex;
     justify-content: center; /* Center the left block horizontally */
-    margin-left: 10px; /* Reset any existing margin */
+    margin-left: 50px; 
+    margin-right: 30px;/* Reset any existing margin */
   }
   .socialp .con{
     text-align: center;
-    margin-left:10px;
-    margin-right: 60px;
+    margin-left:60px;
   }
   .yo {
     font-size: 15px;
@@ -112,14 +112,34 @@ border-radius: 10px;
 /* Add a white border around the contact block */
 
   /* Add border around social media icons */
-.socialp .one i,
-.socialp .two i,
-.socialp .three i,
-.socialp .four i {
-  border: 2px solid white; /* Adjust border properties as needed */
-  padding: 10px; /* Add padding to create space between the icon and the border */
-  margin: 5px; /* Add margin to space out the icons */
-}
+
+  .socialp .one i,
+  .socialp .two ,
+  .socialp .three i,
+  .socialp .four i {
+    display: inline-block;
+  }
+  .socialp .one {
+    margin-right: 5px; /* Reduce the right margin for the Instagram icon */
+  }
+  .socialp .three {
+    margin-right: 5px; /* Reduce the right margin for the Facebook icon */
+  }
+  .socialp .two{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .socialp .icon-container {
+    display: inline-block; /* Ensure the container only takes up as much width as necessary */
+    border: 2px solid white; /* Add border to create the white box */
+    padding: 10px; /* Add padding to create space between the icons and the border */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  }
+
+  
+
+  
+  
 /* Add border around the container of social media icons */
   /* Underline all headings */
 /* Underline specific headings */
