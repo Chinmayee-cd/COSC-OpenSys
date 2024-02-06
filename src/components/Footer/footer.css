@@ -111,9 +111,22 @@
 .socialp .four i {
 	display: inline-block;
 }
-.socialp .one {
-	margin-right: 5px; /* Reduce the right margin for the Instagram icon */
+
+.socialp a {
+	transition: 0.2s;
 }
+
+.socialp i::before,
+.socialp a svg {
+	padding-bottom: 5px;
+	border-bottom: #f1c40f 2px dotted;
+}
+
+.socialp i:hover::before,
+.socialp a:hover {
+	color: #f1c40f;
+}
+
 .socialp .three {
 	margin-right: 5px; /* Reduce the right margin for the Facebook icon */
 }
@@ -122,7 +135,10 @@
 	margin-right: 25px;
 }
 .socialp .icon-container {
-	display: inline-block; /* Ensure the container only takes up as much width as necessary */
+	display: flex;
+	max-width: fit-content; /* Ensure the container only takes up as much width as necessary */
+	margin: auto;
+	align-items: center; /* Center the icons vertically */
 	border: 2px solid white; /* Add border to create the white box */
 	padding: 10px; /* Add padding to create space between the icons and the border */
 	border-radius: 5px; /* Optional: Add border-radius for rounded corners */
@@ -151,7 +167,7 @@
 	bottom: -2px; /* Position slightly below the text */
 	width: 100%; /* Full width */
 	height: 2px; /* Height of the underline */
-	background-color: blue; /* Color of the underline */
+	background-color: gold; /* Color of the underline */
 	animation: glowing 1.5s infinite alternate; /* Apply glowing animation */
 }
 
@@ -159,10 +175,41 @@
 @keyframes glowing {
 	0% {
 		opacity: 0.5; /* Initial opacity */
-		box-shadow: 0 0 10px 2px blue; /* Shadow effect */
+		box-shadow: 0 0 10px 2px gold; /* Shadow effect */
 	}
 	100% {
-		opacity: 1; /* Final opacity */
-		box-shadow: 0 0 20px 5px blue; /* Increased intensity and spread of the glow */
+		opacity: 0.8; /* Final opacity */
+		box-shadow: 0 0 20px 5px gold; /* Increased intensity and spread of the glow */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.footer__quick-links ul li {
+		margin-bottom: 10px;
+	}
+	.footer__contact li {
+		margin-bottom: 10px;
+	}
+	.socialp .loc p {
+		margin-right: 0;
+	}
+	.socialp .vis {
+		margin-left: 0;
+	}
+	.socialp .con {
+		margin-left: 0;
+	}
+	.socialp .yo {
+		margin-left: 0;
+	}
+	.socialp .icon-container {
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.socialp .loc {
+		flex-direction: column;
+		gap: 2rem;
 	}
 }

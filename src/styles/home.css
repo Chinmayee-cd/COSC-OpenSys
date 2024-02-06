@@ -172,7 +172,32 @@
 	border: 0;
 }
 
+.buy__button {
+	--grad-start: #ffffff;
+	--grad-end: #ffffff;
+	background: linear-gradient(90deg, var(--grad-start), var(--grad-end));
+	transition-property: --grad-end, --grad-end;
+	transition-duration: 0.5s;
+}
+
+@property --grad-start {
+	syntax: "<color>";
+	initial-value: #ffffff;
+	inherits: false;
+}
+
+@property --grad-end {
+	syntax: "<color>";
+	initial-value: #ffffff;
+	inherits: false;
+}
+
 .buy__button:hover {
+	--grad-start: #5d00ff;
+	--grad-end: #ed0393;
+}
+
+/* .buy__button:hover {
 	background: -webkit-linear-gradient(left, #5d00ff, #ed0393);
 	border-radius: 14px;
 	margin-right: 20px;
@@ -191,7 +216,7 @@
 	width: fit-content;
 	word-break: break-word;
 	border: 0;
-}
+} */
 
 .buy__button a {
 	color: black !important;
