@@ -7,7 +7,6 @@ import animationData from "../assets/lottie/Animation - 1707063924246.json";
 import Lottie from "react-lottie";
 import github from "../assets/images/4695723.png";
 import cascade from "../assets/images/download.png";
-import { faqs } from "../components/constants/data";
 import Faqs from "../components/FAQs/Faqs";
 
 const Home = () => {
@@ -22,11 +21,11 @@ const Home = () => {
 
 	return (
 		<Helmet title={"Home"}>
-			<section className="hero__section">
+			<section id="Home" className="hero__section">
 				<Container>
 					<Row>
 						<Col lg="6" md="6">
-							<div id="hero_content" className="hero_content">
+							<div className="hero_content">
 								<div className="h21">
 									<h2>OpenSys</h2>
 								</div>
@@ -115,7 +114,7 @@ const Home = () => {
 							on open-source technologies. After completing the
 							crossword, based on the answers obtained, the teams
 							must commit or push the files listed in the
-							crossword answers to COSC’s GitHub repository.
+							crossword answers to COSC's GitHub repository.
 						</p>
 						<div className="display-flex icon-text">
 							<i className="ri-team-fill"></i>
@@ -173,7 +172,7 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section id="FAQs" className="FAQs">
+			<section id="faqs" className="FAQs">
 				<div className="flex justify-center p-4">
 					<Faqs />
 				</div>

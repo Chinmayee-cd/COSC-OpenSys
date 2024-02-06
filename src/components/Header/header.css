@@ -6,8 +6,10 @@
     width: 100%;
     height: 70px;
     line-height: 70px;
-
-
+/* 
+    // please note that this header is no longer in use and is
+    // replaced by Navbar.jsx because it was easier to implement using
+    //javascript and tailwindcss */
 backdrop-filter: blur( 14px );
 -webkit-backdrop-filter: blur( 4px );
 
@@ -133,8 +135,6 @@ backdrop-filter: blur( 14px );
     border-radius: 10px;
 }
 
-
-
 .show__profileActions{
     display: block !important;
 }
@@ -148,10 +148,133 @@ backdrop-filter: blur( 14px );
 .nav__active{
     font-weight: 700 !important;
     color: #000 !important;
-    
 }
-
+@media only screen and (min-width: 769px){
+    #menuToggle ul{
+        display: none;
+    }
+    #menuToggle input{
+        display: none;
+    }
+}
 @media only screen and (max-width:768px) {
+    #menuToggle
+    {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+    #menuToggle a
+    {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: tomato;
+    }
+
+
+    #menuToggle input
+    {
+    display: block;
+    width: 40px;
+    height: 32px;
+    right: 10pt;
+    position: absolute;
+    
+    cursor: pointer;
+    
+    opacity: 0;
+    z-index: 2; 
+    
+    -webkit-touch-callout: none;
+    }
+    #menuToggle span
+    {
+        background: white;
+        width:33px;
+        right: 10pt;
+        margin-top: 2px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+    position: relative;
+    display: block;
+    height: 4px;
+    float: right;
+    clear: right;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child
+    {
+    transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2)
+    {
+    transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked ~ span
+    {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+    }
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #menuToggle input:checked ~ span:nth-last-child(2)
+    {
+    transform: rotate(-45deg) translate(0, -1px);
+    }
+    #menu
+    {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: black;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(+100%, 0);
+    display: none;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menu li
+    {
+    padding: 10px 0;
+    font-size: 22px;
+    }
+    #menuToggle input:checked ~ ul
+    {
+    display: block;
+    }
     .navigation{
         position: fixed;
         top: 0;
@@ -176,9 +299,7 @@ backdrop-filter: blur( 14px );
         align-items: center;
 
 
-    }
-
- 
+    }   
 
     .mobile__menu span i{
         font-size: 1.1rem !important;
