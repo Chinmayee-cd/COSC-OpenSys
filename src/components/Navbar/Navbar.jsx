@@ -44,6 +44,25 @@ const Navbar = () => {
 
 	// Change navbar color on scroll
 	useEffect(() => {
+		setInitialRender(false);
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						console.log("setting active:", entry.target.id);
+						setActive(entry.target.id);
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+		const sections = document.querySelectorAll("section[id]");
+		sections.forEach((section) => {
+			console.log("observing:", section.id);
+			observer.observe(section);
+		});
+
 		window.addEventListener("scroll", changeNavbarColor);
 		return () => {
 			window.removeEventListener("scroll", changeNavbarColor);

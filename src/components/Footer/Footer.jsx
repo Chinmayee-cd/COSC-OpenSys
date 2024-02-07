@@ -13,12 +13,12 @@ const Footer = () => {
 			<Container>
 				<Row>
 					<Col className="text-center social" lg="12">
-						<p className="socialp flex flex-col items-center">
-							<div class="oo">
+						<div className="socialp flex flex-col items-center">
+							<div className="oo">
 								CONTACT INFORMATION: <br /> <br />
 							</div>
 							<br />
-							<div class="loc flex">
+							<div className="loc flex">
 								<div className="flex flex-col items-center text-[16px] py-6">
 									<div>
 										LOCATION:
@@ -28,7 +28,7 @@ const Footer = () => {
 										Gandipet, Hyderabad - 500075.
 									</div>
 								</div>
-								<div class="vis flex flex-col items-center">
+								<div className="vis flex flex-col items-center">
 									<p>
 										VISIT US: <br />
 										<a
@@ -55,7 +55,7 @@ const Footer = () => {
 										alignItems: "center",
 										justifyContent: "center",
 									}}
-									class="con flex justify-center"
+									className="con flex justify-center"
 								>
 									<p className="flex justify-center items-center">
 										CONTACT: <br />
@@ -66,13 +66,13 @@ const Footer = () => {
 							</div>
 							<br />
 							<br />
-							<div class="sm">
+							<div className="sm">
 								<p>
 									Our Social Media Handles: <br /> <br />
 								</p>{" "}
 							</div>
 							<div className="icon-container">
-								<div class="one">
+								<div className="one">
 									<a
 										href="https://www.instagram.com/cbitosc/"
 										target="_blank"
@@ -81,7 +81,7 @@ const Footer = () => {
 										<i className="ri-instagram-line"></i>
 									</a>
 								</div>
-								<div class="three">
+								<div className="three">
 									<a
 										href="https://www.facebook.com/cbitosc/"
 										target="_blank"
@@ -90,7 +90,7 @@ const Footer = () => {
 										<i className="ri-facebook-circle-fill"></i>
 									</a>
 								</div>
-								<div class="two">
+								<div className="two">
 									<a
 										href="https://twitter.com/cbitosc?t=rWGqPsaidSTGfA8FpwPPUw&s=09"
 										target="_blank"
@@ -99,7 +99,7 @@ const Footer = () => {
 										<RiTwitterXFill />
 									</a>
 								</div>
-								<div class="four">
+								<div className="four">
 									<a
 										href="https://www.linkedin.com/company/cbitosc/"
 										target="_blank"
@@ -109,7 +109,7 @@ const Footer = () => {
 									</a>
 								</div>
 							</div>
-						</p>
+						</div>
 					</Col>
 
 					<Col lg="12">
