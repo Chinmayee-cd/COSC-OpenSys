@@ -22,7 +22,6 @@ const Navbar = () => {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						console.log("setting active:", entry.target.id);
 						setActive(entry.target.id);
 					}
 				});
@@ -34,11 +33,9 @@ const Navbar = () => {
 			const sections = document.querySelectorAll("section[id]");
 			const footer = document.querySelector("footer");
 			sections.forEach((section) => {
-				console.log("observing:", section.id);
 				observer.observe(section);
 			});
 
-			console.log("observing:", footer.id);
 			observer.observe(footer);
 		});
 

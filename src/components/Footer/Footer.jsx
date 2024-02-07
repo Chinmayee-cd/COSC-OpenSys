@@ -77,6 +77,7 @@ const Footer = () => {
 										href="https://www.instagram.com/cbitosc/"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="COSC Instagram Link"
 									>
 										<i className="ri-instagram-line"></i>
 									</a>
@@ -86,6 +87,7 @@ const Footer = () => {
 										href="https://www.facebook.com/cbitosc/"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="COSC Facebook Link"
 									>
 										<i className="ri-facebook-circle-fill"></i>
 									</a>
@@ -95,6 +97,7 @@ const Footer = () => {
 										href="https://twitter.com/cbitosc?t=rWGqPsaidSTGfA8FpwPPUw&s=09"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="COSC Twitter / X Link"
 									>
 										<RiTwitterXFill />
 									</a>
@@ -104,6 +107,7 @@ const Footer = () => {
 										href="https://www.linkedin.com/company/cbitosc/"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="COSC LinkedIn Link"
 									>
 										<i className="ri-linkedin-line"></i>
 									</a>
