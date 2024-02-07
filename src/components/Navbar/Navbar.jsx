@@ -14,35 +14,7 @@ const Navbar = () => {
 		}
 	};
 
-	// Update navbar link on scroll
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						console.log("setting active:", entry.target.id);
-						setActive(entry.target.id);
-					}
-				});
-			},
-			{ threshold: 0.1 }
-		);
-		const sections = document.querySelectorAll("section[id]");
-		sections.forEach((section) => {
-			observer.observe(section);
-		});
-		return () => {
-			sections.forEach((section) => {
-				observer.unobserve(section);
-			});
-		};
-	}, []);
-
-	useEffect(() => {
-		setInitialRender(false);
-	}, []);
-
-	// Change navbar color on scroll
+	// Change navbar states on scroll
 	useEffect(() => {
 		setInitialRender(false);
 
@@ -57,21 +29,25 @@ const Navbar = () => {
 			},
 			{ threshold: 0.3 }
 		);
-		const sections = document.querySelectorAll("section[id]");
-		const footer = document.querySelector("footer");
-		sections.forEach((section) => {
-			console.log("observing:", section.id);
-			observer.observe(section);
-		});
 
-		console.log("observing:", footer.id);
-		observer.observe(footer);
+		window.addEventListener("load", () => {
+			const sections = document.querySelectorAll("section[id]");
+			const footer = document.querySelector("footer");
+			sections.forEach((section) => {
+				console.log("observing:", section.id);
+				observer.observe(section);
+			});
+
+			console.log("observing:", footer.id);
+			observer.observe(footer);
+		});
 
 		window.addEventListener("scroll", changeNavbarColor);
 		return () => {
 			window.removeEventListener("scroll", changeNavbarColor);
 		};
 	}, []);
+
 	return (
 		<nav
 			style={{
