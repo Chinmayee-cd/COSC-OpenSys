@@ -338,6 +338,25 @@
 	margin-left: 5px;
 }
 
+.contactbox{
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8.7px);
+	-webkit-backdrop-filter: blur(8.7px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	height: 250px;
+	width: 300px;
+	margin: 30px;
+}
+
+.contactboxes{
+	margin-top: 50px;
+	align-items: center;
+}
+
+
+
 @media only screen and (max-width: 992px) {
 	.hero_content {
 		margin-top: 0;
@@ -421,6 +440,25 @@
 
 	.lottie {
 		padding: 0;
+	}
+
+	.h1contactmobile{
+		font-size: 25px !important;
+	}
+
+	.contactboxes{
+		display: flex;
+		flex-direction: column;
+		margin: 0px;
+		margin-top: 20px;
+	}
+
+	
+}
+
+@media only screen and (max-width: 320px) {
+	.h1events{
+		margin-top: 180px;
 	}
 }
 
