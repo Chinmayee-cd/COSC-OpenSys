@@ -2,16 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.footer {
-	padding-top: 60px;
-	padding-bottom: 30px;
+.footerbox{
+	width: 70%;
+}
 
-	color: white;
 
+
+footer{
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	border-radius: 10px;
+}
+
+.footero {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .footer__text {
@@ -177,6 +188,75 @@
 	animation: glowing 1.5s infinite alternate; /* Apply glowing animation */
 }
 
+.alic{
+	display: flex;
+	flex-direction: row;
+}
+
+
+.boxo{
+	height: 200px;
+	width: 100%;
+	justify-content: center;
+}
+
+.cosclogofooter img{
+	height: 60px !important;
+	width: auto !important;
+	margin: 20px;
+}
+
+.cosclogofooter{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.socialhandles{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.socialhandles i{
+	font-size: 25px;
+	color: black !important;
+}
+
+.linko:hover{
+	color: #f1c40f !important;
+}
+
+.socialround{
+	padding: 3px;
+	border: 1px solid #fff;
+	border-radius: 99px ;
+	width: 45px;
+	margin: 20px 5px;
+	background-color: #fff;
+	--grad-start: #ffffff;
+	--grad-end: #ffffff;
+	background: linear-gradient(90deg, var(--grad-start), var(--grad-end));
+	transition-property: --grad-end, --grad-end;
+	transition-duration: 0.5s;
+}
+
+.socialround svg{
+	padding: 7px;
+}
+
+.socialround:hover{
+	--grad-start: #5d00ff;
+	--grad-end: #ed0393;
+	color: #fff !important;
+}
+
+.socialround:hover i{
+	color: #fff !important;
+}
+
 /* Define glowing animation */
 @keyframes glowing {
 	0% {
@@ -218,6 +298,13 @@
 		flex-direction: column;
 		gap: 2rem;
 	}
+
+	.alic{
+		display: flex;
+		flex-direction: column;
+	}
+
+	
 }
 
 @media (max-width: 768px) {
