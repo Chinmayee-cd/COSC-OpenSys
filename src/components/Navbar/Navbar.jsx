@@ -55,13 +55,17 @@ const Navbar = () => {
 					}
 				});
 			},
-			{ threshold: 0.1 }
+			{ threshold: 0.3 }
 		);
 		const sections = document.querySelectorAll("section[id]");
+		const footer = document.querySelector("footer");
 		sections.forEach((section) => {
 			console.log("observing:", section.id);
 			observer.observe(section);
 		});
+
+		console.log("observing:", footer.id);
+		observer.observe(footer);
 
 		window.addEventListener("scroll", changeNavbarColor);
 		return () => {
