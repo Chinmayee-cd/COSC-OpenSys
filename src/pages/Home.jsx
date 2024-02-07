@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import Helmet from "../components/Helmet/Helmet";
 import "../styles/home.css";
 import { Container, Row, Col } from "reactstrap";
@@ -12,6 +13,10 @@ import { events } from '../components/constants/data';
 import { aboutdata } from '../components/constants/data';
 import { homepage } from '../components/constants/data';
 
+const sectionVariant = {
+	hidden: { opacity: 0, y: 50 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
 const Home = () => {
 	const lottieOptions = {
@@ -29,10 +34,56 @@ const Home = () => {
 	const aboutpage = aboutdata.find(item => item.id === 'about-1');
 	const homedata = homepage.find(item => item.id === 'home');
 
+	const [ref1, inView1] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+	
+	  const [ref2, inView2] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+	
+	  const [ref3, inView3] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+	
+	  const [ref4, inView4] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+
+	  const [refNeo1, inViewNeo1] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+	
+	  const [refNeo2, inViewNeo2] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+
+	  const [refNeo3, inViewNeo3] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+	
+	  const [refNeo4, inViewNeo4] = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	  });
+
 
 	return (
 		<Helmet title={"Home"}>
-			<section id="home" className="hero__section">
+			<motion.section
+				ref={ref1}
+				id="home"
+				className="hero__section"
+				variants={sectionVariant}
+				initial="hidden"
+				animate={inView1 ? 'visible' : 'hidden'}>
 				<Container>
 					<Row>
 						<Col lg="6" md="6">
@@ -63,9 +114,14 @@ const Home = () => {
 						</Col>
 					</Row>
 				</Container>
-			</section>
-
-			<section id="about" className="about">
+			</motion.section>
+			<motion.section
+				ref={ref2}
+				id="about"
+				className="about"
+				variants={sectionVariant}
+				initial="hidden"
+				animate={inView2 ? 'visible' : 'hidden'}>
 				<div className="abouts">
 					<div className="h21 h2bold">
 						<h2>About the Event</h2>
@@ -102,11 +158,17 @@ const Home = () => {
 						</Col>
 					</div>
 				</div>
-			</section>
+			</motion.section>
 
-			<section id="events" className="events">
+			<motion.section
+				ref={ref3}
+				id="events"
+				className="events"
+				variants={sectionVariant}
+				initial="hidden"
+				animate={inView3 ? 'visible' : 'hidden'}>
 				<h1 className="h1events">Events</h1>
-				<div className="neomorphism">
+				<motion.div className="neomorphism" ref={refNeo1} variants={sectionVariant} animate={inViewNeo1 ? 'visible' : 'hidden'}>
 				<div className="text-white" style={{width:'100%'}}>
 						<div id='gitimagedesktop'>
 						<img className="github" style={{height:'auto'}} src={github} alt="" />
@@ -132,9 +194,10 @@ const Home = () => {
 					<div id='gitimage'>
 						<img className="github" src={github} alt="" />
 					</div>
-				</div>
+				</motion.div>
 
-				<div className="neomorphism">
+				<motion.div className="neomorphism" ref={refNeo2} variants={sectionVariant} animate={inViewNeo2 ? 'visible' : 'hidden'}>
+
 					<div>
 						<img className="cascade" src={cascade} alt="" />
 					</div>
@@ -167,8 +230,8 @@ const Home = () => {
 							<a href={`${event2.link}`} className="text-[16px]" >{event2.status}</a>
 						</motion.button>
 					</div>
-				</div>
-				<div className="neomorphism">
+				</motion.div>
+				<motion.div className="neomorphism" ref={refNeo3} variants={sectionVariant} animate={inViewNeo3 ? 'visible' : 'hidden'}>
 				<div className="text-white" style={{width:'100%'}}>
 						<div id='gitimagedesktop'>
 						<img className="github" style={{height:'auto'}} src={github} alt="" />
@@ -194,8 +257,8 @@ const Home = () => {
 					<div id='gitimage'>
 						<img className="github" src={github} alt="" />
 					</div>
-				</div>
-				<div className="neomorphism">
+				</motion.div>
+				<motion.div className="neomorphism" ref={refNeo4} variants={sectionVariant} animate={inViewNeo4 ? 'visible' : 'hidden'}>
 					<div>
 						<img className="cascade" src={cascade} alt="" />
 					</div>
@@ -228,14 +291,21 @@ const Home = () => {
 							<a href={`${event4.link}`} className="text-[16px]" >{event4.status}</a>
 						</motion.button>
 					</div>
-				</div>
-			</section>
+				</motion.div>
+			</motion.section>
 
-			<section id="faqs" className="FAQs">
+			<motion.section
+				ref={ref4}
+				id="faqs"
+				className="FAQs"
+				variants={sectionVariant}
+				initial="hidden"
+				animate={inView4 ? 'visible' : 'hidden'}
+			>
 				<div className="flex justify-center p-4">
 					<Faqs />
 				</div>
-			</section>
+			</motion.section>
 		</Helmet>
 	);
 };

@@ -4,7 +4,7 @@ import { faqs } from '../constants/data';
 
 const Faqs = () => {
   return (
-    <section id='faqs' className='section'>
+    <section id='faqs' className='section w-[70%]'>
     <div className='flex flex-col items-center'>
       <h1 className='text-white text-3xl font-sans font-bold py-10'> FREQUENTLY ASKED QUESTIONS </h1>
       {faqs.map((faq, index) => (
