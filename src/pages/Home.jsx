@@ -94,7 +94,7 @@ const Home = () => {
 								<h5>Where?</h5>
 							</div>
 							<div className="pr40">
-								<p>Chaitanya Bharathi Istitute of Technology</p>
+								<p>Chaitanya Bharathi Institute of Technology</p>
 							</div>
 						</Col>
 					</div>
