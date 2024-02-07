@@ -8,6 +8,10 @@ import Lottie from "react-lottie";
 import github from "../assets/images/4695723.png";
 import cascade from "../assets/images/download.png";
 import Faqs from "../components/FAQs/Faqs";
+import { events } from '../components/constants/data';
+import { aboutdata } from '../components/constants/data';
+import { homepage } from '../components/constants/data';
+
 
 const Home = () => {
 	const lottieOptions = {
@@ -18,6 +22,13 @@ const Home = () => {
 			preserveAspectRatio: "xMidYMid slice",
 		},
 	};
+	const event1 = events.find(item => item.id === 'event-1');
+	const event2 = events.find(item => item.id === 'event-2');
+	const event3 = events.find(item => item.id === 'event-3');
+	const event4 = events.find(item => item.id === 'event-4');
+	const aboutpage = aboutdata.find(item => item.id === 'about-1');
+	const homedata = homepage.find(item => item.id === 'home');
+
 
 	return (
 		<Helmet title={"Home"}>
@@ -27,21 +38,20 @@ const Home = () => {
 						<Col lg="6" md="6">
 							<div className="hero_content">
 								<div className="h21">
-									<h2>OpenSys</h2>
+									<h2>{homedata.title}</h2>
 								</div>
 								<div className="h22 mt-0">
 									<h2 className="gradvpy">
-										The Open-Source symposium
+										{homedata.tagline}
 									</h2>
 								</div>
 
 								<p>
-									A grand symphony of expansive technical
-									spectacles!
+									{homedata.description}
 								</p>
 
 								<motion.button className="buy__button">
-									<a href="#events">Register</a>
+									<a href="#events">{homedata.status}</a>
 								</motion.button>
 							</div>
 						</Col>
@@ -63,14 +73,7 @@ const Home = () => {
 					<div className="aboutdescription">
 						<Col lg="6">
 							<p>
-								OpenSys is an amalgamation of multiple events
-								that are designed to give you the best
-								competitive experience all while being fun and
-								enjoyable. Since we are the open source
-								community of CBIT, all the events will be
-								completely free for everyone to participate and
-								you also stand a chance to win exciting cash
-								prizes. See you there!
+								{aboutpage.description}
 							</p>
 							<div className="display-flex">
 								<i className="ri-team-fill"></i>
@@ -87,14 +90,14 @@ const Home = () => {
 								<h5>When?</h5>
 							</div>
 							<div className="pr40">
-								<p>February 26th and 27th, 2024</p>
+								<p>{aboutpage.date}</p>
 							</div>
 							<div className="display-flex where_when">
 								<i className="ri-map-pin-fill"></i>
 								<h5>Where?</h5>
 							</div>
 							<div className="pr40">
-								<p>Chaitanya Bharathi Institute of Technology</p>
+								<p>{aboutpage.location}</p>
 							</div>
 						</Col>
 					</div>
@@ -109,27 +112,20 @@ const Home = () => {
 						<img className="github" style={{height:'auto'}} src={github} alt="" />
 						</div>
 						<div className="text-3xl m-6 " style={{lineHeight:'24px'}}>
-						<h1 className="font-semibold pb-4">Git Cryptex</h1>
+						<h1 className="font-semibold pb-4">{event1.title}</h1>
 						<p>
-							An event aimed to test participants' knowledge on
-							open-source technologies such as Git and GitHub. The
-							event comprises two stages. First, all the teams
-							will be required to solve a crossword puzzle based
-							on open-source technologies. After completing the
-							crossword, based on the answers obtained, the teams
-							must commit or push the files listed in the
-							crossword answers to COSC's GitHub repository.
+							{event1.description}
 						</p>
 						<div className="display-flex icon-text">
 							<i className="ri-team-fill"></i>
-							<p>Participation: Team Event (Team Size: 2)</p>
+							<p>Participation: {event1.participation}</p>
 						</div>
 						<div className="display-flex icon-text">
 							<i className="ri-calendar-todo-fill"></i>
-							<p>Date: 24th February 2024</p>
+							<p>Date: {event1.date}</p>
 						</div>
 						<motion.button id="event1register" className="buy__button mt-40">
-							<a href="#events" style={{lineHeight:'24px'}} className="text-[16px]">Register</a>
+							<a href={`${event1.link}`} style={{lineHeight:'24px'}} className="text-[16px]">{event1.status}</a>
 						</motion.button>
 						</div>
 					</div>
@@ -143,20 +139,17 @@ const Home = () => {
 						<img className="cascade" src={cascade} alt="" />
 					</div>
 					<div style={{lineHeight:'24px'}} className="text-3xl m-6">
-						<h1 className="font-semibold pb-4">Cascade Arcade</h1>
+						<h1 className="font-semibold pb-4">{event2.title}</h1>
 						<p>
-							An open-sourced event for all the design and UI/UX
-							enthusiasts of the college community, who will
-							compete against each other to create CSS templates
-							that match the specified pattern.
+							{event2.description}
 						</p>
 						<div className="display-flex icon-text py-2">
 							<i className="ri-user-3-fill"></i>
-							<p>Participation: Individual Event</p>
+							<p>Participation: {event2.participation}</p>
 						</div>
 						<div className="display-flex icon-text">
 							<i className="ri-calendar-todo-fill"></i>
-							<p>Date: 24th February 2024</p>
+							<p>Date: {event2.date}</p>
 						</div>
 						<div className="display-flex icon-text py-2">
 							<i className="ri-link"></i>
@@ -171,7 +164,68 @@ const Home = () => {
 							</p>
 						</div>
 						<motion.button id="event2register" className="buy__button mt-40 mb-40 " >
-							<a href="#events" className="text-[16px]" >Register</a>
+							<a href={`${event2.link}`} className="text-[16px]" >{event2.status}</a>
+						</motion.button>
+					</div>
+				</div>
+				<div className="neomorphism">
+				<div className="text-white" style={{width:'100%'}}>
+						<div id='gitimagedesktop'>
+						<img className="github" style={{height:'auto'}} src={github} alt="" />
+						</div>
+						<div className="text-3xl m-6 " style={{lineHeight:'24px'}}>
+						<h1 className="font-semibold pb-4">{event3.title}</h1>
+						<p>
+							{event3.description}
+						</p>
+						<div className="display-flex icon-text">
+							<i className="ri-team-fill"></i>
+							<p>Participation: {event3.participation}</p>
+						</div>
+						<div className="display-flex icon-text">
+							<i className="ri-calendar-todo-fill"></i>
+							<p>Date: {event3.date}</p>
+						</div>
+						<motion.button id="event1register" className="buy__button mt-40">
+							<a href={`${event3.link}`} style={{lineHeight:'24px'}} className="text-[16px]">{event3.status}</a>
+						</motion.button>
+						</div>
+					</div>
+					<div id='gitimage'>
+						<img className="github" src={github} alt="" />
+					</div>
+				</div>
+				<div className="neomorphism">
+					<div>
+						<img className="cascade" src={cascade} alt="" />
+					</div>
+					<div style={{lineHeight:'24px'}} className="text-3xl m-6">
+						<h1 className="font-semibold pb-4">{event4.title}</h1>
+						<p>
+							{event4.description}
+						</p>
+						<div className="display-flex icon-text py-2">
+							<i className="ri-user-3-fill"></i>
+							<p>Participation: {event4.participation}</p>
+						</div>
+						<div className="display-flex icon-text">
+							<i className="ri-calendar-todo-fill"></i>
+							<p>Date: {event4.date}</p>
+						</div>
+						<div className="display-flex icon-text py-2">
+							<i className="ri-link"></i>
+							<p>
+								Reference Link:{" "}
+								<a
+									className="border-spacing-2 border-b-2 border-b-blue-500"
+									href="https://cssbattle.dev/"
+								>
+									CSS Battle
+								</a>
+							</p>
+						</div>
+						<motion.button id="event2register" className="buy__button mt-40 mb-40 " >
+							<a href={`${event4.link}`} className="text-[16px]" >{event4.status}</a>
 						</motion.button>
 					</div>
 				</div>
