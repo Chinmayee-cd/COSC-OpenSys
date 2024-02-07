@@ -51,7 +51,11 @@ const Navbar = () => {
 	}, []);
 	return (
 		<nav
-			style={{ zIndex: "9999" }}
+			style={{
+			zIndex: "9999",
+			backdropFilter: "blur(14px)",
+			WebkitBackdropFilter: "blur(4px)",
+		  }}
 			className={`w-full flex flex-wrap left-0 right-0 p-6 justify-between items-center navbar opacity-90 transition-colors duration-300 z-50 fixed ${navbarColor}`}
 		>
 			<div className="m-[-10px] flex items-center">
